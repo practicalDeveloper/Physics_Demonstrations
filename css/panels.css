@@ -1,0 +1,105 @@
+.grid-container.menu-collapsed {
+  --menu-width: var(--sidebar-collapsed-width);
+}
+
+.grid-container.controls-collapsed {
+  --controls-width: var(--sidebar-collapsed-width);
+}
+
+.panel-toggle {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 13px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.menu-toggle {
+  right: -13px;
+}
+
+.menu-toggle::before {
+  content: "‹";
+}
+
+.controls-toggle {
+  left: -13px;
+}
+
+.controls-toggle::before {
+  content: "›";
+}
+
+.panel-toggle-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.panel-toggle:hover,
+.panel-toggle:focus-visible {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.grid-container.menu-collapsed #divMenu,
+.grid-container.controls-collapsed #divControls {
+  overflow: hidden;
+  background: var(--board-color);
+  background-clip: padding-box;
+}
+
+.grid-container.menu-collapsed #divMenuInner,
+.grid-container.controls-collapsed #divControlsInner {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  border-width: 0;
+  pointer-events: none;
+}
+
+.grid-container.menu-collapsed .menu-toggle,
+.grid-container.controls-collapsed .controls-toggle {
+  inset: 0;
+  width: auto;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.grid-container.menu-collapsed .menu-toggle .panel-toggle-label,
+.grid-container.controls-collapsed .controls-toggle .panel-toggle-label {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  overflow: visible;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: var(--font-collapsed);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.grid-container.menu-collapsed .menu-toggle::before {
+  content: "›";
+}
+
+.grid-container.controls-collapsed .controls-toggle::before {
+  content: "‹";
+}

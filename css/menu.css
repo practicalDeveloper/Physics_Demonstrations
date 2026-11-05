@@ -1,0 +1,112 @@
+#divMenuBox {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+/* Level 1  стили фона */
+#level1 {
+  background-color: var(--level1-color);
+}
+
+#level1 a:hover,
+#level1 a:focus,
+#level1 a:active {
+  background:  var(--subLevelOver1-color);
+}
+
+#level1 a {
+  background: var(--subLevel1-color);
+}
+
+/* Level 2  стили фона */
+#level2 {
+  background-color: var(--level2-color);
+}
+
+#level2 a:hover,
+#level2 a:focus,
+#level2 a:active {
+  background:  var(--subLevelOver2-color);
+}
+
+#level2 a {
+  background:  var(--subLevel2-color);
+}
+
+/* Level 3  стили фона */
+#level3 {
+  background-color: var(--level3-color);
+}
+
+#level3 a:hover,
+#level3 a:focus,
+#level3 a:active {
+  background: var(--subLevelOver3-color);
+}
+
+#level3 a {
+  background: var(--subLevel3-color);
+}
+
+/* Level 4  стили фона */
+#level4 {
+  background-color: var(--level4-color);
+}
+
+#level4 a:hover,
+#level4 a:focus,
+#level4 a:active {
+  background:var(--subLevelOver4-color);
+}
+
+#level4 a {
+  background: var(--subLevel4-color);
+}
+
+/* Level 5  стили фона */
+#level5 {
+  background-color: var(--level5-color);
+}
+
+.firstLevelMenu {
+  cursor: pointer;
+  margin: 0px;
+  padding: var(--menu-item-padding);
+  font-size: var(--font-menu);
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+
+.menu-item {
+  display: block;
+  cursor: pointer;
+  border-bottom: white solid 1px;
+}
+
+.menu-item a, .menu-sub-item a{
+    display: block;
+    padding: var(--menu-item-padding);
+    font-size: var(--font-menu);
+    line-height: 1.25;
+    overflow-wrap: break-word;
+    text-decoration: none;
+}
+
+.menu-item a {
+  color: white;
+}
+
+.menu-sub-item a {
+  color: black;
+}
+
+.menu-sub-item {
+  cursor: pointer;
+}
+
+.menu-sub-item div {
+  display: block;
+  padding: 0px;
+  margin-top: 1px;
+}

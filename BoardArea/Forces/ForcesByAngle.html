@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-resource="ForcesAddition.Title"> </title>
+    <link type="text/css" rel="Stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/controls.css">
+</head>
+
+<body>
+
+    <!-- Выбор угла -->
+    <div class="content">
+        <div class="contentTitle" data-resource="ForcesAddition.Angle"> </div>
+        <div class="content">
+            <!--  Слайдер диапазона  -->
+            <input type="range" min="55" max="150" value="110" step="0.1" class="slider" id="angleRange">
+            <!-- Value label-->
+            <div class="text"> </div>
+        </div>
+    </div>
+
+    <!-- X weight input -->
+    <div class="content">
+        <div class="contentTitle" data-resource="ForcesAddition.XWeight"> </div>
+        <div class="content">
+            <input id="xWeightTextBox" size="5" type="text" value="1" />
+        </div>
+    </div>
+
+    <!-- Ввод Y веса -->
+    <div class="content">
+        <div class="contentTitle" data-resource="ForcesAddition.YWeight"></div>
+        <div class="content">
+            <input id="yWeightTextBox" size="5" type="text" value="1" />
+        </div>
+    </div>
+
+    <!-- Ввод Z веса -->
+    <div class="content">
+        <div class="contentTitle" data-resource="ForcesAddition.ZWeight"></div>
+        <div class="content">
+            <input id="zWeightTextBox" size="5" type="text" value="1" />
+        </div>
+    </div>
+
+    <!-- Максимальное значение динамометра -->
+    <div class="content">
+        <div class="contentTitle">
+            <span data-resource="ForcesAddition.MaxValue"></span>
+            (<span data-resource="Units.Newton"></span>):
+        </div>
+
+        
+        <div class="content">
+            <input id="maxValue" size="5" type="text" value="25" />
+        </div>
+    </div>
+
+    <br>
+    <!-- Уравнение сил -->
+    <div class="content">
+        <span>F<sub>1</sub> = F<sub>2</sub>  = F<sub data-resource="ForcesAddition.Resultant"></sub> / 2 * cos(&#945; / 2) = 
+            <span id="forceLabel"> 0 </span> (<span data-resource="Units.Newton"></span>)  </span> 
+    </div>
+
+    <script type="module" src="../js/forcesByAngleFrame.js"> </script>
+
+</body>
+
+</html>

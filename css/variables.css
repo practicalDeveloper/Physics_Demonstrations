@@ -1,0 +1,42 @@
+:root {
+    --level1-color: #6aa63b;
+    --subLevelOver1-color: #d9dcb0;
+    --subLevel1-color: #ced174;
+
+    --level2-color: #f29e05;
+    --subLevelOver2-color: #f8dfb1;
+    --subLevel2-color: #f8d28e;
+
+    --level3-color: #d52100;
+    --subLevelOver3-color: #eecdc8;
+    --subLevel3-color: #e7b0a7;
+
+    --level4-color: #0292c0;
+    --subLevelOver4-color: #a4c9d5;
+    --subLevel4-color: #82b8c9;
+
+    --level5-color: #5122b4;
+    --board-color: rgb(2, 121, 39);
+
+    --menu-width: 16%;
+    --controls-width: 25%;
+    --sidebar-collapsed-width: 64px;
+
+    --gutter-outer: 10px;
+    --gutter-inner: 15px;
+    --header-height: auto;
+    --footer-height: 30px;
+    --grid-gap: 5px;
+    --stage-height: 1fr;
+
+    --font-title: clamp(22px, 3.2vw, 40px);
+    --font-subtitle: clamp(12px, 0.8vw + 8px, 20px);
+    --font-menu: clamp(12px, 0.5vw + 10px, 16px);
+    --font-panel: clamp(13px, 5.6vw, 18px);
+    --font-label: clamp(14px, 6.25vw, 20px);
+    --font-button: clamp(13px, 5vw, 16px);
+    --button-width: clamp(5.5rem, 36vw, 120px);
+    --font-collapsed: clamp(11px, 2.4vh, 13px);
+    --menu-item-padding: clamp(8px, 1.1vw, 20px);
+    --menu-inner-padding: clamp(4px, 0.7vw, 10px);
+  }
