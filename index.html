@@ -1,112 +1,137 @@
 <!doctype html>
 
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title data-resource="Title"></title>
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/panels.css">
-    <base target="BoardFrame">
-</head>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/panels.css" />
+    <base target="BoardFrame" />
+  </head>
 
-<body>
-
+  <body>
     <div class="grid-container">
-
-        <!-- Заголовок  -->
-        <div class="headerArea" style="margin: 0; padding: 0;">
-            <div class="Title">
-                <p  data-resource="Title"></p>
-            </div>
-
-            <div class="Title">
-                <p id="ApplicationHeader" data-resource="SubTitle"></p>
-            </div>
+      <!-- Заголовок  -->
+      <div class="headerArea" style="margin: 0; padding: 0">
+        <div class="Title">
+          <p data-resource="Title"></p>
         </div>
 
-        <!-- Холст  -->
-        <div class="contentArea" id="divCanvas">
-            <div id="divCanvasInner">
-                <canvas id="Canvas"></canvas>
-                <canvas id="CanvasOverlay"></canvas>
-            </div>
+        <div class="Title">
+          <p id="ApplicationHeader" data-resource="SubTitle"></p>
         </div>
+      </div>
 
-        <!-- Меню  -->
-        <div class="menuArea" id="divMenu">
-            <button type="button" id="menuToggle" class="panel-toggle menu-toggle">
-                <span class="panel-toggle-label" data-resource="Menu.Title"></span>
-            </button>
+      <!-- Холст  -->
+      <div class="contentArea" id="divCanvas">
+        <div id="divCanvasInner">
+          <canvas id="Canvas"></canvas>
+          <canvas id="CanvasOverlay"></canvas>
+        </div>
+      </div>
 
-            <div id="divMenuInner">
-                <div id="divMenuBox">
+      <!-- Меню  -->
+      <div class="menuArea" id="divMenu">
+        <button type="button" id="menuToggle" class="panel-toggle menu-toggle">
+          <span class="panel-toggle-label" data-resource="Menu.Title"></span>
+        </button>
 
-
-                    <div class="menu-item" id="level1">
-                        <p class="firstLevelMenu" data-resource="Menu.Dynamics"></p>
-                        <div hidden class="menu-sub-item">
-                            <div data-topic="1">
-                                <a href="./BoardArea/Forces/ForcesByAngle.html" data-resource="ForcesAddition.Title"></a>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="menu-item" id="level2">
-                        <p class="firstLevelMenu" data-resource="Menu.PressureOfLiquids"></p>
-                        <div hidden class="menu-sub-item">
-                            <div data-topic="2"><a href="./BoardArea/FluidMechanics/ArchimedesPrinciple.html" data-resource="ArchimedesPrinciple.Title"></a> </div>
-                        </div>
-                    </div>
-
-
-                    <div class="menu-item" id="level3">
-                        <p class="firstLevelMenu" data-resource="Menu.MechanicalOscillations"></p>
-                        <div hidden class="menu-sub-item">
-                            <div data-topic="3"><a href="./BoardArea/MechanicalOscillations/Pendulum.html" data-resource="Pendulum.Title"></a> </div>
-                            <div data-topic="5"><a href="./BoardArea/MechanicalOscillations/Oscillations.html" data-resource="Oscillations.Title"></a> </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="menu-item" id="level4">
-                        <p class="firstLevelMenu" data-resource="Menu.Appliances"></p>
-                        <div hidden class="menu-sub-item">
-                            <div data-topic="4"><a href="./BoardArea/Appliances/Tools.html" data-resource="Appliances.Title"></a> </div>
-                        </div>
-                    </div>
-
-
+        <div id="divMenuInner">
+          <div id="divMenuBox">
+            <div class="menu-item" id="level1">
+              <p class="firstLevelMenu" data-resource="Menu.Dynamics"></p>
+              <div hidden class="menu-sub-item">
+                <div data-topic="1">
+                  <a
+                    href="./BoardArea/Forces/ForcesByAngle.html"
+                    data-resource="ForcesAddition.Title"
+                  ></a>
                 </div>
+              </div>
             </div>
 
-        </div>
-
-        <!-- Контролы  -->
-        <div class="sidebarArea" id="divControls">
-            <button type="button" id="panelToggle" class="panel-toggle controls-toggle">
-                <span class="panel-toggle-label" data-resource="Panel.Title"></span>
-            </button>
-            <div id="divControlsInner">
-                <iframe  name="BoardFrame" id="BoardFrame" width="100%"
-                    height="100%" style="border:0">
-                </iframe>
+            <div class="menu-item" id="level2">
+              <p
+                class="firstLevelMenu"
+                data-resource="Menu.PressureOfLiquids"
+              ></p>
+              <div hidden class="menu-sub-item">
+                <div data-topic="2">
+                  <a
+                    href="./BoardArea/FluidMechanics/ArchimedesPrinciple.html"
+                    data-resource="ArchimedesPrinciple.Title"
+                  ></a>
+                </div>
+              </div>
             </div>
-        </div>
 
-        <!-- Футер  -->
-        <div class="footerArea"></div>
+            <div class="menu-item" id="level3">
+              <p
+                class="firstLevelMenu"
+                data-resource="Menu.MechanicalOscillations"
+              ></p>
+              <div hidden class="menu-sub-item">
+                <div data-topic="3">
+                  <a
+                    href="./BoardArea/MechanicalOscillations/Pendulum.html"
+                    data-resource="Pendulum.Title"
+                  ></a>
+                </div>
+                <div data-topic="5">
+                  <a
+                    href="./BoardArea/MechanicalOscillations/Oscillations.html"
+                    data-resource="Oscillations.Title"
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-item" id="level4">
+              <p class="firstLevelMenu" data-resource="Menu.Appliances"></p>
+              <div hidden class="menu-sub-item">
+                <div data-topic="4">
+                  <a
+                    href="./BoardArea/Appliances/Tools.html"
+                    data-resource="Appliances.Title"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Контролы  -->
+      <div class="sidebarArea" id="divControls">
+        <button
+          type="button"
+          id="panelToggle"
+          class="panel-toggle controls-toggle"
+        >
+          <span class="panel-toggle-label" data-resource="Panel.Title"></span>
+        </button>
+        <div id="divControlsInner">
+          <iframe
+            name="BoardFrame"
+            id="BoardFrame"
+            width="100%"
+            height="100%"
+            style="border: 0"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Футер  -->
+      <div class="footerArea"></div>
     </div>
 
-    <script type="module"  src="./js/main.js"></script>
-
-</body>
-
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>

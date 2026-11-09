@@ -1,91 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title data-resource="Oscillations.Title"></title>
     <link type="text/css" rel="Stylesheet" href="../../css/variables.css" />
-    <link rel="stylesheet" href="../../css/controls.css">
-</head>
+    <link rel="stylesheet" href="../../css/controls.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Mass input -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="Oscillations.Mass"></span>
-            (<span data-resource="Units.Kilogram"></span>):
-        </div>
+      <div class="contentTitle">
+        <span data-resource="Oscillations.Mass"></span>
+        (<span data-resource="Units.Kilogram"></span>):
+      </div>
 
-        <div class="content">
-            <!-- Масса, слайдер -->
-            <input type="range" min="0.1" max="5" value="1" step="0.1" class="slider" id="massRange">
-            <!-- Значение, label-->
-            <div class="text"> </div>
-        </div>
+      <div class="content">
+        <!-- Масса, слайдер -->
+        <input
+          type="range"
+          min="0.1"
+          max="5"
+          value="1"
+          step="0.1"
+          class="slider"
+          id="massRange"
+        />
+        <!-- Значение, label-->
+        <div class="text"></div>
+      </div>
     </div>
 
     <!-- Жесткость, input -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="Oscillations.Stiffness"></span>
-            (<span data-resource="Units.Newton"></span>/<span data-resource="Units.Meter"></span>):
-        </div>
+      <div class="contentTitle">
+        <span data-resource="Oscillations.Stiffness"></span>
+        (<span data-resource="Units.Newton"></span>/<span
+          data-resource="Units.Meter"
+        ></span
+        >):
+      </div>
 
-        <div class="content">
-            <!-- Жесткость, слайдер -->
-            <input type="range" min="150" max="500" value="100" step="1" class="slider" id="stiffnessRange">
-            <!-- Значение, label-->
-            <div class="text"> </div>
-        </div>
+      <div class="content">
+        <!-- Жесткость, слайдер -->
+        <input
+          type="range"
+          min="150"
+          max="500"
+          value="100"
+          step="1"
+          class="slider"
+          id="stiffnessRange"
+        />
+        <!-- Значение, label-->
+        <div class="text"></div>
+      </div>
     </div>
 
     <!-- Затухание, input -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="Oscillations.Damping"></span>
-            (<span data-resource="Units.Newton"></span>&middot;с/<span data-resource="Units.Meter"></span>):
-        </div>
+      <div class="contentTitle">
+        <span data-resource="Oscillations.Damping"></span>
+        (<span data-resource="Units.Newton"></span>&middot;с/<span
+          data-resource="Units.Meter"
+        ></span
+        >):
+      </div>
 
-        <div class="content">
-            <!-- Затухание, слайдер -->
-            <input type="range" min="0" max="5" value="0.5" step="0.1" class="slider" id="dampingRange">
-            <!-- Значение, label-->
-            <div class="text"> </div>
-        </div>
+      <div class="content">
+        <!-- Затухание, слайдер -->
+        <input
+          type="range"
+          min="0"
+          max="5"
+          value="0.5"
+          step="0.1"
+          class="slider"
+          id="dampingRange"
+        />
+        <!-- Значение, label-->
+        <div class="text"></div>
+      </div>
     </div>
 
     <!-- Начальное смещение, input -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="Oscillations.Displacement"></span>
-            (<span data-resource="Units.Centimeter"></span>):
-        </div>
+      <div class="contentTitle">
+        <span data-resource="Oscillations.Displacement"></span>
+        (<span data-resource="Units.Centimeter"></span>):
+      </div>
 
-        <div class="content">
-            <!-- Смещение, слайдер -->
-            <input type="range" min="-25" max="25" value="-10" step="0.1" class="slider" id="displacementRange">
-            <!-- Значение, label-->
-            <div class="text"> </div>
-        </div>
+      <div class="content">
+        <!-- Смещение, слайдер -->
+        <input
+          type="range"
+          min="-25"
+          max="25"
+          value="-10"
+          step="0.1"
+          class="slider"
+          id="displacementRange"
+        />
+        <!-- Значение, label-->
+        <div class="text"></div>
+      </div>
     </div>
 
-
-    <br>
+    <br />
     <!-- Уравнение частоты затухающих колебаний -->
     <div class="content">
-        <span>f<sub>d</sub> = 1 / 2&pi; * &radic;<span style="text-decoration:overline;"> k / m - c<sup>2</sup> / 4m<sup>2</sup> </span> = <span
-                id="frequencyLabel"> 0 </span> (<span data-resource="Units.Hz"></span>)
+      <span
+        >f<sub>d</sub> = 1 / 2&pi; * &radic;<span
+          style="text-decoration: overline"
+        >
+          k / m - c<sup>2</sup> / 4m<sup>2</sup>
         </span>
+        = <span id="frequencyLabel"> 0 </span> (<span
+          data-resource="Units.Hz"
+        ></span
+        >)
+      </span>
     </div>
 
+    <br />
 
-    <br>
-
-<script type="module" src="../js/oscillationsFrame.js"> </script>
-
-</body>
-
+    <script type="module" src="../js/oscillationsFrame.js"></script>
+  </body>
 </html>

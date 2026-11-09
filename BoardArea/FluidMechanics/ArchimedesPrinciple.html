@@ -1,112 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Archimede's principle</title>
     <link type="text/css" rel="Stylesheet" href="../../css/variables.css" />
-    <link rel="stylesheet" href="../../css/controls.css">
-</head>
+    <link rel="stylesheet" href="../../css/controls.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Ввод веса тела -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="ArchimedesPrinciple.BodyWeight"></span>
-            (<span data-resource="Units.Kilogram"></span>):
-        </div>
+      <div class="contentTitle">
+        <span data-resource="ArchimedesPrinciple.BodyWeight"></span>
+        (<span data-resource="Units.Kilogram"></span>):
+      </div>
 
-        <div class="content">
-            <!--  Слайдер диапазона  -->
-            <input type="range" min="1" max="100" value="50" step="1" class="slider" id="weightRange">
-            <!-- Value label-->
-            <div class="text"> </div>
-        </div>
+      <div class="content">
+        <!--  Слайдер диапазона  -->
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          step="1"
+          class="slider"
+          id="weightRange"
+        />
+        <!-- Value label-->
+        <div class="text"></div>
+      </div>
     </div>
 
     <!-- Плотность жидкости -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="ArchimedesPrinciple.LiquidDensity"></span>
-            (<span data-resource="Units.Kilogram"></span>/<span data-resource="Units.Meter"></span><sup>3</sup>):
-        </div>
-                
-        <div class="content">
-            <input id="liquidDensityTextBox" size="5" type="text" value="997" />
-        </div>
-    </div>
+      <div class="contentTitle">
+        <span data-resource="ArchimedesPrinciple.LiquidDensity"></span>
+        (<span data-resource="Units.Kilogram"></span>/<span
+          data-resource="Units.Meter"
+        ></span
+        ><sup>3</sup>):
+      </div>
 
+      <div class="content">
+        <input id="liquidDensityTextBox" size="5" type="text" value="997" />
+      </div>
+    </div>
 
     <!-- Плотность тела -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="ArchimedesPrinciple.BodyDensity"></span>
-            (<span data-resource="Units.Kilogram"></span>/<span data-resource="Units.Meter"></span><sup>3</sup>):
-        </div>
+      <div class="contentTitle">
+        <span data-resource="ArchimedesPrinciple.BodyDensity"></span>
+        (<span data-resource="Units.Kilogram"></span>/<span
+          data-resource="Units.Meter"
+        ></span
+        ><sup>3</sup>):
+      </div>
 
-        <div class="content">
-            <input id="bodyDensityTextBox" size="5" type="text" value="1500" />
-        </div>
+      <div class="content">
+        <input id="bodyDensityTextBox" size="5" type="text" value="1500" />
+      </div>
     </div>
-
-
 
     <!-- Максимальное значение динамометра -->
     <div class="content">
-        <div class="contentTitle">
-            <span data-resource="ArchimedesPrinciple.MaxValue"></span>
-            (<span data-resource="Units.Newton"></span>):
-        </div>
-        <div class="content">
-            <!--  Слайдер диапазона макю значения динамометра -->
-            <input type="range" min="5" max="1000" value="600" step="1" class="slider" id="maxValueRange">
-            <!-- Value label-->
-            <div class="text"> </div>
-        </div>
+      <div class="contentTitle">
+        <span data-resource="ArchimedesPrinciple.MaxValue"></span>
+        (<span data-resource="Units.Newton"></span>):
+      </div>
+      <div class="content">
+        <!--  Слайдер диапазона макю значения динамометра -->
+        <input
+          type="range"
+          min="5"
+          max="1000"
+          value="600"
+          step="1"
+          class="slider"
+          id="maxValueRange"
+        />
+        <!-- Value label-->
+        <div class="text"></div>
+      </div>
     </div>
 
-
-
-    <br>
+    <br />
     <!-- Уравнение объема тела -->
     <div class="content">
-            <span>V<sub><span data-resource="ArchimedesPrinciple.Body"></span></sub> = m / &#961; <sub>
-                <span data-resource="ArchimedesPrinciple.Body"></span>
-                </sub> = <span id="volumeLabel"> 0 </span>       
-                (<span data-resource="Units.Meter"></span><sup>3</sup>)
-        </span>
+      <span
+        >V<sub><span data-resource="ArchimedesPrinciple.Body"></span></sub> = m
+        / &#961;
+        <sub>
+          <span data-resource="ArchimedesPrinciple.Body"></span>
+        </sub>
+        = <span id="volumeLabel"> 0 </span> (<span
+          data-resource="Units.Meter"
+        ></span
+        ><sup>3</sup>)
+      </span>
     </div>
 
     <!-- Уравнение выталкивающей силы -->
     <div class="content">
-         <span>F<sub data-resource="ArchimedesPrinciple.Buoyant"></sub> = &#961; <sub data-resource="ArchimedesPrinciple.Liquid"></sub> * g * V
-            <sub data-resource="ArchimedesPrinciple.Body">body</sub>= <span id="forceLabel"> 0 </span>  (<span data-resource="Units.Newton"></span>)
-        </span>
-
+      <span
+        >F<sub data-resource="ArchimedesPrinciple.Buoyant"></sub> = &#961;
+        <sub data-resource="ArchimedesPrinciple.Liquid"></sub> * g * V
+        <sub data-resource="ArchimedesPrinciple.Body">body</sub>=
+        <span id="forceLabel"> 0 </span> (<span
+          data-resource="Units.Newton"
+        ></span
+        >)
+      </span>
     </div>
 
     <!-- Сила тяжести -->
     <div class="content">
-        <span>F<sub data-resource="ArchimedesPrinciple.Gravity"></sub> = <span id="gravityLabel"> 0 </span> 
-        (<span data-resource="Units.Newton"></span>) </span> 
+      <span
+        >F<sub data-resource="ArchimedesPrinciple.Gravity"></sub> =
+        <span id="gravityLabel"> 0 </span> (<span
+          data-resource="Units.Newton"
+        ></span
+        >)
+      </span>
     </div>
 
-
-    <br>
+    <br />
 
     <!-- Условие -->
     <div class="content">
-        <span id="conditionLabel"> </span>
+      <span id="conditionLabel"> </span>
     </div>
 
+    <br />
 
-    <br>
-
-    <script type="module" src="../js/archimedesPrincipleFrame.js"> </script>
-
-</body>
-
+    <script type="module" src="../js/archimedesPrincipleFrame.js"></script>
+  </body>
 </html>

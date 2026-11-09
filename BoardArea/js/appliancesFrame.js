@@ -1,33 +1,34 @@
-        import { frameRender } from "../js/framesRendering.js";
-        import { Resources }  from "../../js/appMethods.js";
+import { frameRender } from "../js/framesRendering.js";
+import { Resources } from "../../js/appMethods.js";
 
-        Resources.apply();
+Resources.apply();
 
-        document.getElementById("setArrowValueButton").addEventListener("click", setArrowValueFunction);
-        document.getElementById("setSpringValueButton").addEventListener("click", setSpringValueFunction);
+document
+  .getElementById("setArrowValueButton")
+  .addEventListener("click", setArrowValueFunction);
+document
+  .getElementById("setSpringValueButton")
+  .addEventListener("click", setSpringValueFunction);
 
-        function setArrowValueFunction() {
-            let valueArrow = document.getElementById('arrowValueTextBox').value;
-            parent.postMessage(JSON.stringify({'valueArrow': valueArrow }), "*");
-        }
+function setArrowValueFunction() {
+  let valueArrow = document.getElementById("arrowValueTextBox").value;
+  parent.postMessage(JSON.stringify({ valueArrow: valueArrow }), "*");
+}
 
-        function setSpringValueFunction() {
-            let valueArrow = document.getElementById('springValueTextBox').value;
-            parent.postMessage(JSON.stringify({'valueSpring': valueArrow }), "*");
-        }
+function setSpringValueFunction() {
+  let valueArrow = document.getElementById("springValueTextBox").value;
+  parent.postMessage(JSON.stringify({ valueSpring: valueArrow }), "*");
+}
 
-        // функция для отправки сообщения родителю из IFrame с данными
-        frameRender.passControlsMessage = function () {
+// функция для отправки сообщения родителю из IFrame с данными
+frameRender.passControlsMessage = function () {
+  let maxValueSpring = document.getElementById("maxValueSpring").value;
+  let maxValueArrow = document.getElementById("maxValueArrow").value;
 
-             let maxValueSpring = document.getElementById('maxValueSpring').value;
-             let maxValueArrow = document.getElementById('maxValueArrow').value;
-             
-            let pass_data = {
-                'maxValueSpring': maxValueSpring,
-                'maxValueArrow' : maxValueArrow
-            };
+  let pass_data = {
+    maxValueSpring: maxValueSpring,
+    maxValueArrow: maxValueArrow,
+  };
 
-            parent.postMessage(JSON.stringify(pass_data), "*");
-
-        } // passControlsMessage
-
+  parent.postMessage(JSON.stringify(pass_data), "*");
+}; // passControlsMessage
