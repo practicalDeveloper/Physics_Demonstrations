@@ -4,7 +4,7 @@
 
 Исходная версия проекта доступна в старом репозитории [JavaScript_Physics](https://github.com/practicalDeveloper/JavaScript_Physics)
 
-Работающий сайт с демонстрациями доступен здесь [https://practicaldeveloper.github.io/JavaScript_Physics/](https://practicaldeveloper.github.io/JavaScript_Physics/)
+Работающий сайт с демонстрациями доступен по ссылке [https://practicaldeveloper.github.io/Physics_Demonstrations/](https://practicaldeveloper.github.io/Physics_Demonstrations/)
 
 В нынешней версии сделаны следующие изменения:
 
